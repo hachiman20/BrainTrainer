@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#FAED75"
+            android:text="05s"
+            android:textSize="46sp"
+            app:autoSizeTextType="none" />
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="52dp"
+            android:layout_height="61dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#A5F34E"
+            android:freezesText="false"
+            android:text="00"
+            android:textSize="36sp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/sumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20px"
+            android:layout_marginStart="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:layout_marginEnd="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="20px"
+            android:layout_right="@id/timerTextView"
+            android:background="#C1A0FD"
+            android:textSize="65sp"
+            app:autoSizeTextType="uniform" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/sumTextView"
+            android:layout_margin="20px">
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#FC5C2C"
+                android:onClick="chooseAnswer"
+                android:tag="0"
+                android:text="5"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#21B3F5"
+                android:onClick="chooseAnswer"
+                android:tag="1"
+                android:text="5"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#2AF0DD"
+                android:onClick="chooseAnswer"
+                android:tag="2"
+                android:text="5"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#FFC107"
+                android:onClick="chooseAnswer"
+                android:tag="3"
+                android:text="5"
+                android:textSize="60sp" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="132dp"
+            android:layout_marginRight="132dp"
+            android:layout_marginBottom="334dp"
+            android:layout_below="@id/gridLayout"
+            android:layout_margin="20px"
+            android:background="#F798B8"
+            android:hapticFeedbackEnabled="false"
+            android:onClick="start"
+            android:text="Start Game"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="173dp"
+            android:layout_height="81dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="126dp"
+            android:layout_marginLeft="126dp"
+            android:layout_marginBottom="219dp"
+            android:layout_below="@id/startButton"
+            android:layout_margin="20px"
+            android:textSize="40sp"
+            app:autoSizeTextType="uniform" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
